@@ -1,0 +1,26 @@
+/* --- PROFILE --- */
+.profile {
+  padding: 20px;
+  box-shadow: 2px 2px 10px 2px rgb(0 0 0 / 0.3);
+}
+.profile__avatar {
+  display: block;
+  width: 70px;
+  margin-inline: auto;
+
+  border-radius: 50%;
+}
+.profile__description {
+  /* display: flex; */
+  text-align: center;
+  border-radius: 50%;
+}
+.profile__stats {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+.profile__stats li {
+  display: flex;
+  flex-direction: column;
+}
