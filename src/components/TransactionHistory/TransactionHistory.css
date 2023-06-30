@@ -1,0 +1,95 @@
+.transaction-history {
+  position: relative;
+
+  display: block;
+
+  height: 269px;
+
+  /* type */
+  text-align: center;
+
+  /* visible */
+  border-collapse: collapse;
+  box-shadow: 2px 2px 10px 2px rgb(0 0 0 / 0.3);
+
+  /* scroll */
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: grey white;
+  scroll-snap-type: y mandatory;
+}
+.transaction-history__row {
+  scroll-snap-align: start;
+}
+
+.transaction-history__row th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  /* visible */
+  color: #fff;
+  background-color: rgb(0, 195, 220);
+  outline: 1px solid #fff;
+
+  /* type */
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.transaction-history__row td {
+  /* visible */
+  color: #636363;
+  border-right: 1px solid hsl(0, 0%, 85%);
+
+  /* type */
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+.transaction-history__row > td:first-child {
+  display: grid;
+  text-align: left;
+  width: 100%;
+  padding-left: 30px;
+
+  grid-template-columns: 10ch;
+  justify-content: center;
+}
+
+/*
+@media screen and (min-width: 320px) {
+  .transaction-history__row > td:first-child {
+    /* padding-left: 100px; */
+/* } */
+/* } */
+/* @media screen and (min-width: 768px) { */
+/* .transaction-history__row > td:first-child { */
+/* padding-left: 13%; */
+/* } */
+/* } */
+
+.transaction-history__row :is(th, td) {
+  width: 264px;
+  /* height: 30px; */
+  /* padding-inline: 100px; */
+  padding-block: 15px;
+}
+
+.transaction-history__row:nth-child(2n + 2) {
+  background-color: hsl(0, 0%, 95%);
+}
+.transaction-history__row :last-child {
+  border: none;
+}
+
+/* --- SCROLL --- */
+.transaction-history::-webkit-scrollbar {
+  width: 10px;
+}
+.transaction-history::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.transaction-history::-webkit-scrollbar-thumb {
+  background-color: #999;
+}
+.transaction-history::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}

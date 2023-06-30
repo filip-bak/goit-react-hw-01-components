@@ -24,12 +24,7 @@ const FriendListItem = ({ avatar, name, isOnline = false }) => {
           isOnline ? 'frineds-list__status' : 'frineds-list__status-off'
         }
       ></span>
-      <img
-        className="frineds-list__avatar"
-        src={avatar}
-        alt="User avatar"
-        width="48"
-      />
+      <img className="frineds-list__avatar" src={avatar} alt="User avatar" />
       <p className="frineds-list__name">{name}</p>
     </li>
   );
