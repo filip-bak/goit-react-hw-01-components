@@ -1,34 +1,4 @@
 .friends-list {
   display: grid;
   gap: 20px;
-
-  list-style: none;
-}
-.frineds-list__item {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  padding-inline: 30px 70px;
-  padding-block: 5px;
-
-  box-shadow: 2px 2px 10px 2px rgb(0 0 0 / 0.3);
-}
-.frineds-list__item::before {
-  content: '';
-  position: absolute;
-
-  width: 15px;
-  aspect-ratio: 1;
-
-  color: red;
-  border-radius: 50%;
-  /* zmiana na podstawie isOnline (zmiana klasy ?)*/
-  background-color: red;
-
-  transform: translateX(-20px);
-}
-.frineds-list__avatar {
-  width: 70px;
-  margin-right: 10px;
 }

@@ -9,10 +9,11 @@ import user from '../data/user';
 import stats from '../data/statistics';
 import friends from '../data/friends.json';
 import transactions from '../data/transactions.json';
+// import transactions2 from '../data/transactions2.json';
 
 export const App = () => {
   return (
-    <div className="container">
+    <div className="wrapper">
       <Profile
         username={user.username}
         tag={user.tag}

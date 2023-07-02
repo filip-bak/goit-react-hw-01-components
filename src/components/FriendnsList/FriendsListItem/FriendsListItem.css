@@ -1,0 +1,42 @@
+.frineds-list__item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  padding-inline: 25px 40px;
+  padding-block: 5px;
+
+  box-shadow: 0px 1px 3px 1px rgb(0 0 0 / 0.3);
+}
+@media screen and (min-width: 320px) {
+  .frineds-list__item {
+    padding-inline-end: 80px;
+  }
+}
+.frineds-list__status {
+  position: absolute;
+
+  width: 15px;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+  left: 10px;
+}
+.frineds-list__status--online {
+  background-color: #00bb00;
+}
+.frineds-list__status--offline {
+  background-color: #ff4b4b;
+}
+
+.frineds-list__avatar {
+  width: 80px;
+  margin-inline: 10px;
+
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+}
+.frineds-list__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
