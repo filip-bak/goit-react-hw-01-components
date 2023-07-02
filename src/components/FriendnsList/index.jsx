@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import './FriendsList.css';
 
 import FriendListItem from './FriendsListItem';
-import { type } from '@testing-library/user-event/dist/type';
 
 const FriendList = ({ friends }) => {
   return (

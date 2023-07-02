@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import './Profile.css';
+
 const Profile = ({ username, tag, location, avatar, stats }) => {
   if (typeof stats === 'undefined') stats = 0;
-  const isStats = typeof stats === 'undefined';
   const { followers = 0, views = 0, likes = 0 } = stats;
 
   return (
