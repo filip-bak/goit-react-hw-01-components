@@ -3,11 +3,20 @@ import { setColor } from './component';
 import './Statistics.css';
 
 const Statistics = ({ title = '', stats }) => {
+  // styles when more than 4 stats
+  const statsListStyles = itemsCount => {
+    let style = '';
+    if (itemsCount > 4) {
+      style = 'statistics__stat-list--nested';
+    }
+    return style;
+  };
+
   return (
     <section className="statistics">
       {title && <h2 className="statistics__title">{title}</h2>}
 
-      <ul className="statistics__stat-list">
+      <ul className={`statistics__stat-list ${statsListStyles(stats.length)}`}>
         {stats &&
           typeof stats === 'object' &&
           stats.map((el, idx) => (
