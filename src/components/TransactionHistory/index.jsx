@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './TransactionHistory.css';
+import styles from './TransactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => {
   const smallTableStyles =
-    items && items.length < 5 ? 'transaction-history--small' : '';
+    items && items.length < 5 ? styles['container--small'] : '';
 
   return (
-    <table role="table" className={`transaction-history ${smallTableStyles}`}>
+    <table role="table" className={`${styles.container} ${smallTableStyles}`}>
       <thead>
-        <tr className="transaction-history__row">
+        <tr className={styles.row}>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
@@ -19,10 +19,8 @@ const TransactionHistory = ({ items }) => {
       <tbody>
         {items && typeof items === 'object'
           ? items.map(el => (
-              <tr key={el.id} className="transaction-history__row">
-                <td role="cell" align="left">
-                  {el.type}
-                </td>
+              <tr key={el.id} className={styles.row}>
+                <td role="cell">{el.type}</td>
                 <td>{el.amount}</td>
                 <td>{el.currency}</td>
               </tr>

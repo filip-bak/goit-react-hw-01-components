@@ -1,33 +1,33 @@
 import PropTypes from 'prop-types';
-import './Profile.css';
+import styles from './Profile.module.css';
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
   if (typeof stats === 'undefined') stats = 0;
   const { followers = 0, views = 0, likes = 0 } = stats;
 
   return (
-    <div className="profile">
-      <div className="profile__description">
+    <div className={styles.container}>
+      <div className={styles.description}>
         {avatar && (
-          <img className="profile__avatar" src={avatar} alt="User avatar" />
+          <img className={styles.avatar} src={avatar} alt="User avatar" />
         )}
-        {username && <p className="profile__name">{username}</p>}
-        {tag && <p className="profile__tag">@{tag}</p>}
-        {location && <p className="profile__location">{location}</p>}
+        {username && <p className={styles.name}>{username}</p>}
+        {tag && <p className={styles.tag}>@{tag}</p>}
+        {location && <p className={styles.location}>{location}</p>}
       </div>
 
-      <ul className="profile__stats">
+      <ul className={styles.stats}>
         <li>
-          <span className="profile__label">Followers</span>
-          <span className="profile__quantity">{getStatValue(followers)}</span>
+          <span className={styles.label}>Followers</span>
+          <span className={styles.quantity}>{getStatValue(followers)}</span>
         </li>
         <li>
-          <span className="profile__label">Views</span>
-          <span className="profile__quantity">{getStatValue(views)}</span>
+          <span className={styles.label}>Views</span>
+          <span className={styles.quantity}>{getStatValue(views)}</span>
         </li>
         <li>
-          <span className="profile__label">Likes</span>
-          <span className="profile__quantity">{getStatValue(likes)}</span>
+          <span className={styles.label}>Likes</span>
+          <span className={styles.quantity}>{getStatValue(likes)}</span>
         </li>
       </ul>
     </div>
